@@ -1,0 +1,15 @@
+{%extends 'maqueta.html'%}
+{% block Lista %}
+<input type="submit" value="Volver a gestion de Usuarios" onclick = "location='/gestionUsuario/'"/>
+<H2>Agregar Nuevo Usuario</H2>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Agregar Usuario</button>
+
+</form>
+
+
+
+{% endblock %}

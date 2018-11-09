@@ -1,0 +1,222 @@
+/*Formato del carrusel*/
+.carrusel{
+	margin-top: 5px;
+	width: 100%;
+
+	/*Flex*/
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+
+}
+#carrusel img{
+    width: 100%;
+}
+
+/*espacio social*/
+.social {
+	align-items: center;
+	width: 100%;
+	padding: 10px;
+	color: #fff;
+
+	/*Flex*/
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+/*Botones de las redes sociales*/
+.social .redes {
+	width: 30%;
+	/*Flex*/
+	display:flex;
+}
+
+.redes a{
+	background: #04B486;
+	text-align: center;
+	justify-content: space-between;
+}
+
+.redes img{
+	width: 90%;
+	justify-content: space-around;
+}
+
+/*contenedor1- información de la página*/
+.contenedor1{
+	display: flex;
+	flex-direction: row;
+}
+
+/*cuerpo del contenedor 1*/
+.contenedor1 .rescate {
+	padding-top:5%;
+	background: #fff;
+	color: black;
+	text-align: right;
+	border-right: 15px solid #fff;
+
+	/*FLEX*/
+	display: flex;
+	flex: 40%;
+	flex-direction: column;
+}
+
+.rescate div{
+	flex: 1 1 20%;
+}
+
+.rescate img {
+	width: 50%;
+	margin-right: 3px;
+}
+
+
+/*Contenedor 2*/
+/*Financiamiento*/
+.contenedor1 .contenedor2 {
+	padding-top:10px;
+	background: #fff;
+	color: black;
+	text-align: left;
+	border-left: 15px solid #fff;
+
+	/*FLEX*/
+	display: flex;
+	flex: 40%;
+	flex-direction: column;
+}
+
+.contenedor2 div{
+	flex: 1 1 20%;
+}
+
+.contenedor2 img {
+	width: 50%;
+	margin-left: 3px;
+}
+
+/*Collage*/
+.collage {
+  width: 100%;
+  max-width: 1000px;
+
+  margin: auto;
+	padding: 10px;
+	display:flex;
+	justify-content:space-around;
+}
+
+/*Collage*/
+.collage .caja{
+    width: 32%;
+    overflow: hidden;
+
+		/*FLEX*/
+		display:flex;
+		flex-direction:column;
+		justify-content:space-between;
+}
+
+.collage .caja img{
+    width: 100%;
+    height: 32%;
+    object-fit:cover;
+}
+
+.collage .largo img{
+	 height: 49%;
+}
+
+.collage .maslargo img{
+	height: 30%;
+}
+
+.collage .maslargo #larga{
+	height: 66%;
+}
+
+
+@media screen and (max-width: 800px) {
+	/*https://www.w3schools.com/cssref/css3_pr_mediaquery.asp*/
+	.contenedor {
+		width: 100%;
+
+		/*Flex*/
+		display: flex;
+		flex-direction:column;
+	}
+
+	header {
+		padding:0;
+
+		/*Flex*/
+		flex-direction:column;
+	}
+
+	header .logo {
+		margin:20px 0;
+	}
+
+	header nav {
+		width: 100%;
+		margin-right: 0px;
+
+		/*Flex*/
+		flex-direction:column;
+	}
+
+	header nav a{
+		background:#6dccaa;
+		width:100%;
+		border: 1px solid #85d4b7;
+	}
+
+	header nav a:hover{
+		background:#60b294;
+	}
+
+	.carrusel{
+		width: 100%;
+	}
+
+	#carrusel #txtimagen{
+		width: 90%;
+	}
+
+	.social{
+		width: 100%;
+
+		/*Flex*/
+		flex-direction: column-reverse;
+		flex-wrap: column;
+	}
+
+
+	.social div{
+		visibility: hidden;
+		font-size: 10%;
+	}
+
+	.social .redes{
+		width: 80%;
+		visibility: visible;
+
+		/*Flex*/
+		justify-content: space-between;
+	}
+
+	.redes a{
+		justify-content: space-around;
+	}
+
+	.contenedor1{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+}

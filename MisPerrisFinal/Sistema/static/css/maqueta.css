@@ -1,0 +1,105 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family:'Segoe UI';
+	/*se define como se calcularán los cuadrados en base al ancho y al alto con respecto al padding
+	content-box indica que todo será sin considerar padding o bordes
+	border-box indica que se incluyen en los calculos bordes y padding
+	initial se fija el valor por defecto, depende del dispositivo y el navegador
+	inherit utiliza el valor del contenedor del elemento
+	*/
+	box-sizing: border-box;
+}
+
+/*Contenedor de toda la Página*/
+.contenedor {
+	background:rgb(1, 148, 109);
+	width: 100%;
+	margin:auto;
+/* Flexbox */
+	/*display es la propiedad que indica como se verán los elementos
+	En css tradicional se usan tipicamente block, inline none, table, pero existen varias opciones
+	flex indica que el elemento tendrá características responsivas
+	*/
+	display:flex;
+/*Flex-flow indica como se desplegarán los elementos dentro de un contenedor flex
+	hay dos configuraciones básicas flex-direction y flex-wrap
+	row, row-reverse, column, column-reverse flex directiion
+	nowrap,wrap,wrap-reverse
+	*/
+	flex-flow:row wrap;
+}
+
+/*Cuerpo de la Página*/
+body {
+	background:#fff;
+	color: black;
+}
+
+/*Todo lo de la barra superior*/
+header {
+	width:100%;
+	padding:20px;
+	background: #04B486;
+
+	/* Flexbox */
+	display: flex;
+	/*flex-start desde un comienzo hasta el final
+	flex-end desde el final al comienzo
+	center 
+	space-between los items son puestos con espacios posteriores
+	space-around items son puestos con espacios antes
+	*/
+	justify-content:space-between;
+	align-items:center;
+	flex-direction:row;
+	flex-wrap:wrap;
+}
+
+/*Logo de la página*/
+header .logo {
+	color:#fff;
+	font-size:30px;
+}
+
+/*Ancho del logo*/
+header .logo img {
+	width:100%;
+	vertical-align: top;
+}
+
+
+/*Menú Superior*/
+header nav {
+	width:50%;
+
+
+	/* Flexbox */
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+}
+
+header nav a {
+	background:#01DFA5;
+	color:#fff;
+	text-align: center;
+	text-decoration: none;
+	padding:10px;
+	/* Flexbox */
+	flex-grow:1; /*Especifica el numero maximo de items flex que pueden adecuarse en una zona*/
+}
+
+/*Formato de click sobre el panel de navegación*/
+header nav a:hover {
+	background:#088A68;
+}
+
+/* Pie de página */
+footer{
+	width: 100%;
+	background:rgb(71, 69, 69);
+	padding:10px;
+}
+
+ 

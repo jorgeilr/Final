@@ -1,0 +1,43 @@
+{%extends 'maqueta.html'%}
+{% block Lista %}
+<input type="submit" value="Ir a lista de perros" onclick = "location='/ListaPerros/'"/>
+
+{% if mascotas %}
+<table>                   
+    <tr>
+        <td>id</td><td>Nombre Mascota</td><td>raza de Mascota</td><td>Estado de la Mascota</td>
+    </tr>
+    {% for m in mascotas %}
+    <tr>
+        <td>{{m.fichaMascota}}</td>
+        <td>{{m.nombreMascota}}</td>
+        <td>{{m.razaMascota}}</td>
+        <td>{{m.estadoMascota}}</td>
+        <td><a class= "eliminar" href="/eliminarMascota/{{m.fichaMascota}}">Eliminar</a></td>
+        <td>      </td>
+        <td><a class= "editar"  href="/modificarMascota/{{m.fichaMascota}}">Actualizar</a></td>
+    </tr>
+    {% endfor %}
+    <br>   
+</table>
+{%  if messages %}
+    {% for m in messages%}
+        <div>{{ m }}</div>
+    {% endfor%}
+{% endif %}
+
+{% else %}
+<h2>No hay Mascotas registrados</h2>
+{% endif %}
+{% endblock %}
+{% block Formulario%}
+<form  role="form"  enctype="multipart/form-data" action="" method="POST" id="upload-image-form"> 
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Agregar Mascota</button>
+    
+</form>
+{% endblock %}
+
+
+

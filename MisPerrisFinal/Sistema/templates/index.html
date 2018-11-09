@@ -1,0 +1,74 @@
+{%extends 'maqueta.html'%}
+{% load staticfiles %}
+{% block Principal %}
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/formatocarrusel.js' %}"></script>
+<script src="{% static 'js/jquery.bxslider.min.js' %}"></script><!--Script del Carrusel-->
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+<link rel="stylesheet" href="{% static 'css/jquery.bxslider.css' %}"> <!--Ruta de Estilo del Carrusel-->
+
+	<div class="carrusel" >
+		<div id="carrusel">
+		<div><img src="{% static 'imagenes/carrusel/carrusel1.png' %}"></div>
+		<div><img src="{% static 'imagenes/carrusel/carrusel2.jpg' %}"></div>
+		<div><img src="{% static 'imagenes/carrusel/carrusel3.jpg' %}"></div>
+		<div><img src="{% static 'imagenes/carrusel/carrusel4.jpg' %}"></div>
+		<div><img src="{% static 'imagenes/carrusel/carrusel5.jpg' %}"></div>
+		<div><img src="{% static 'imagenes/carrusel/carrusel6.jpg' %}"></div>
+		</div>
+	</div>
+
+	<div class="social">
+		<div><b>+56998765431 Rescate y Adopción de Perros Callejeros</b></div>
+		<div class="redes">
+		  <a href="https://www.facebook.com/"><img src="{% static 'imagenes/social/facebook.png' %}"  title="Facebook"></a>
+		  <a href="https://plus.google.com/discover?hl=es"><img src="{% static 'imagenes/social/googleplus.png' %}"  title="Google+"></a>
+		  <a href="https://www.instagram.com/"><img src="{% static 'imagenes/social/instagram.png' %}"  title="Instagram"></a>
+		  <a href="https://www.gmail.com/"><img src="{% static 'imagenes/social/correo.png' %}"  title="Correo"></a>
+		</div>
+	</div>
+				
+		
+	<!--Contenedor de la página-->
+	<div class="contenedor1">
+	<!--Zona de Rescate-->
+		<div class="rescate">
+			  <h1>RESCATE</h1>
+			  <h3>Etapa Uno</h3>
+			  <h1>_______</h1>
+			  <p><br>Rescatamos perros en situación de peligro y/o abandono.
+				Los rehabilitamos y los preparamos para buscarles un Hogar.</p>
+				<div><img src="{% static 'imagenes/cuerpo/rescate.jpg' %}"></div>
+		</div>
+		
+		<!--Zona de financiamiento-->
+		<!-- Contenedor2-->
+		<div class="contenedor2">
+			<div><img src="{% static 'imagenes/cuerpo/crowfunding.jpg' %}"></div>
+				<h1>CROWDFUNDING</h1>
+				<h3>FINANCIAMIENTO</h3>
+				<h1>___________</h1>
+				<p><br>Sigue nuestras redes sociales para informarte acerca de las diversas campañas y actividades que realizamos
+				para Obtener financiamiento y seguir ayudando.</p><br>	
+			</div>
+		</div>
+
+
+		<div class="collage">
+				<div class="caja">
+					<img src="{% static 'imagenes/collage/uno.jpg' %}" alt="Imagen 1">
+					<img src="{% static 'imagenes/collage/dos.jpg' %}" alt="Imagen 2">
+					<img src="{% static 'imagenes/collage/tres.jpg' %}" alt="Imagen 3">
+				</div>
+				<div class="caja largo">
+					<img src="{% static 'imagenes/collage/cuatro.jpg' %}" alt="Imagen 4">
+					<img src="{% static 'imagenes/collage/cinco.jpg' %}" alt="Imagen 5">
+				</div>
+				<div class="caja maslargo">
+					<img src="{% static 'imagenes/collage/seis.jpg' %}" alt="Imagen 6" id="larga">
+					<img src="{% static 'imagenes/collage/siete.jpg' %}" alt="Imagen 7">
+				</div>
+		</div>
+			
+	{% endblock%}
+</html>

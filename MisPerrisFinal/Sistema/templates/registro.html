@@ -1,0 +1,11 @@
+{%extends 'maqueta.html'%}
+{% load staticfiles %}
+{% block Formulario%}
+<link rel="stylesheet" href="{% static 'css/estilo_registro.css' %}"> <!--Formato de estilo para registro-->
+<H2>Creacion de cuenta de usuario</H2>
+<form method="POST" class="registro">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn-enviar">Crear</button>
+</form>
+{% endblock %}

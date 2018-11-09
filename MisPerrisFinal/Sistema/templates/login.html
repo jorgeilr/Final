@@ -1,0 +1,13 @@
+{% extends "maqueta.html" %}
+{% load staticfiles %}
+{% block Login%}
+<link rel="stylesheet" href="{% static 'css/estilo_login.css' %}"> <!--Formato de estilo para login-->
+    <form method="POST" class="login">
+    <table>
+        <tr>{%csrf_token%}</tr>
+        <tr>{{form.as_p}}</tr>
+        <tr><input type="submit" class="btn-enviar" value="Acceder"></tr>
+        <tr><a href="#"  class="recuperar" >¿Ha olvidado la contraseña?</a></tr>
+</form>
+
+{% endblock %}

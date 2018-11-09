@@ -1,0 +1,58 @@
+{% load staticfiles %}
+<html lang="es">
+    <head>
+        <link rel="stylesheet" href="{% static 'css/maqueta.css' %}"> <!--Formato de estilo para maqueta-->
+        <script src="{% static 'js/prefix.js' %}" type="test/javascript"></script><!--script para que en todos los navegadores el sitio se vea igual-->
+    </head>
+    <body>
+		<header>
+			<div class="logo">
+				<a href="/index/"><img src="{% static 'imagenes/logo/logo.png' %}" alt="Logo"></a>
+            </div>
+            
+            {% if request.user.is_authenticated %}
+                {% if request.user.is_staff %}
+                    <nav>
+                        <a href="/index/">Inicio</a>
+                        <a href="/gestionUsuario/">Gestion de Usuarios</a>
+                        <a href="/gestionMascota/">Gestion de Mascotas</a>
+                        <a href="/salir/">Salir</a>
+                    </nav>
+                {% else %}
+                    <nav>
+                        <a href="/index/">Inicio</a>
+                        <a href="/ListaPerrosUsu/">Lista de Perritos</a>
+                        
+                        <a href="/salir/">Salir</a>
+                    </nav>
+                {% endif%}
+            {% else %}
+                <nav>
+				    <a href="/index/">Inicio</a>
+				    <a href="/registro/">Registrarse</a>
+				    <a href="/login/">Ingresar</a>
+			    </nav>
+            {% endif%}
+        </header>
+
+        <section>
+            <div class="contenedor">
+                {% block Principal%}
+                {% endblock %}
+                {% block Login%}
+                {% endblock %}
+                <div class="lista">
+                    {% block Lista%}
+                    {% endblock %}
+                </div><br>
+                <div class="formulario">
+                    {% block Formulario%}
+                    {% endblock %}
+                </div>
+            </div>
+        </section>
+    </body>
+    <footer>
+        <H4 align="right">Desarrollo Web y Mobile</H4>
+    </footer>
+</html>
